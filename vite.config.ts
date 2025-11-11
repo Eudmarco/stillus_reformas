@@ -10,9 +10,9 @@ export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, projectRootDir, '');
     
     return {
-      // *** CONFIGURAÇÃO CRÍTICA PARA DEPLOY EM DOMÍNIO PERSONALIZADO (RAIZ) ***
-      // 'base: /' garante que os assets sejam carregados a partir da raiz do domínio.
-      base: '/', 
+      // *** CORREÇÃO CRÍTICA: Base ajustada para o nome do repositório! ***
+      // Se não houver domínio personalizado, a base deve ser: /<NOME_DO_REPOSITORIO>/
+      base: '/stillus_reformas/', 
       // ----------------------------------------------------------------------
       
       server: {
